@@ -162,7 +162,7 @@ A physical clock attempted to enforce a total order on all events. Given any two
 
 <h2>Data consistency with version clocks</h2>
 
-It turns out that vector clocks are very useful for deriving causality among all events. But for data consistency we can get away with a more light-weight option called a version clock. The goal is to derive the final state of a piece of data in a node without having to be concerned about the exact sequence of events that caused the final state. For example: when one node has 10 changes pending and no other nodes have changes, it is only important to know that the node with changes holds the final state and that final state was determined by the last event. The node only has to attach the final version info when passing a chain of predecessors. A version clock provides a summary of vector clocks, they have similar structure but a different meaning.
+It turns out that vector clocks are very useful for deriving causality among events. But for data consistency we can get away with a more light-weight option called a version clock. The goal is to derive the final state of a piece of data in a node without having to be concerned about the exact sequence of events that caused the final state. For example: when one node has 10 changes pending and no other nodes have changes, it is only important to know that the node with changes holds the final state and that final state was determined by the last event. The node only has to attach the final version info when passing a chain of predecessors. A version clock provides a summary of vector clocks, they have similar structure but a different meaning.
 
 <h1>References</h1>
 
