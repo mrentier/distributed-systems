@@ -46,7 +46,7 @@ In practice a CRDT brings:
 
 - local updates without needing remote synchronization.
 - local merge upon receiving data from other nodes (communication with other nodes is assumed, i.e. gossip protocol)
-- a guarantee that all local merges converge. THis is under the assumption that nodes will communicate at some point in time (liveness).
+- a guarantee that all local merges converge. This is under the assumption that nodes will communicate at some point in time (liveness).
 
  Key to a CRDT is the merge operation. A merge operation is a binary operation (an operation on two CRDTs) and has the following properties:
 - commutative: x.y = y.x
