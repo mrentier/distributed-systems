@@ -30,7 +30,7 @@ There are many implementations of CRDTs in use today and they have been instrume
 - Amazon uses CRDTs to keep their order cart in sync. Their database, known as Dynamo, is available as a service.
 - Riak is one of the most popular solutions in this area. One of their well-known customers are Riot games, which uses Riak to implement their in-game chat.
 - Rovio (the company behind Angry Birds game series) uses conflict-free counters for their advertisement platform to make their impression counters work freely even in offline scenarios.
-- SoundClound has their own implementation of Last-Write-Wins Set build in Go on top of Redis, known as Roshi, which they use for their observers management.
+- SoundClound has their own implementation of Last-Write-Wins Set built in Go on top of Redis, known as Roshi, which they use for their observers management.
 - TomTom makes use of CRDTs to manage their navigation data.
 - CREAustralia uses them for their click stream analytics.  
 - Mobile apps that store data on the local device, and that need to sync that data to other devices belonging to the same user (such as calendars, notes, contacts, or reminders).
