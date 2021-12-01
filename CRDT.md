@@ -10,7 +10,7 @@ The set-based solution exists because the problem has some very specific propert
 
 <h1>The problem with distributed replicas</h1>
 
-The above example of 'the sum of unique numbers' demonstrates a rather fundamental issue in distribute systems: how to reach consensus amongst several nodes when different events occur across the nodes. Broadly speaking, there are two possible ways of dealing with such differences: strongle consistent replication or optimistic replication.
+The above example of 'the sum of unique numbers' demonstrates a rather fundamental issue in distribute systems: how to reach consensus amongst several nodes when different events occur across the nodes. Broadly speaking, there are two possible ways of dealing with such differences: strongly consistent replication or optimistic replication.
 
 <h2>Strongly consistent replication</h2>
 
@@ -22,7 +22,7 @@ In this model, users may modify the data on any replica independently of any oth
 
 <h1>Conflict-free Replicated Data Types</h1>
 
-The 'sum of unique numbers' example utilizes a data-structure called a grow-only set. A grow-only set is one of a group of data types named Conflict-free Replicated Data Types (CRDTs). CRDTs fall in the optimistic replication model. Conflict-free is a vague description, but it comes to a simple statement: <em>we are operating on data structures that don't require exclusive write access and are 1) able to detect concurrent updates and 2) perform deterministic, automatic conflict resolution</em>. This doesn't imply a lack of conflict, but we are able to always determine the output up front, based on metadata contained within the structure itself. The core CRDTs are counters, registers and sets, but from them we can compose more advanced ones like maps or even JSON.
+The 'sum of unique numbers' example utilizes a data-structure called a grow-only set. A grow-only set is one of a group of data types named Conflict-free Replicated Data Types (CRDTs). CRDTs fall in the optimistic replication model. Conflict-free is a vague description, but it comes down to the following: <em>we are operating on data structures that don't require exclusive write access and are 1) able to detect concurrent updates and 2) perform deterministic, automatic conflict resolution</em>. This doesn't imply a lack of conflict, but we are able to always determine the output up front, based on metadata contained within the structure itself. The core CRDTs are counters, registers and sets, but from them we can compose more advanced ones like maps or even JSON.
 
 There are many implementations of CRDTs in use today and they have been instrumental in distributed computing at scale. Examples are:
 
