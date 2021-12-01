@@ -33,7 +33,7 @@ There are many implementations of CRDTs in use today and they have been instrume
 - SoundClound has their own implementation of Last-Write-Wins Set build in Go on top of Redis, known as Roshi, which they use for their observers management.
 - TomTom makes use of CRDTs to manage their navigation data.
 - CREAustralia uses them for their click stream analytics.  
-- Mobile apps that store data on the local device, and that need to sync that data to other devices belonging to the same user (such as calendars, notes, contacts, or reminders);
+- Mobile apps that store data on the local device, and that need to sync that data to other devices belonging to the same user (such as calendars, notes, contacts, or reminders).
 - Collaboration software, such as Google Docs, Trello, Figma, or many others, in which several users can concurrently make changes to the same file or data. Note though that many collaboration tools use more operation-based solutions due to issues with intent (CRDTs replicate data but don't include by default a notion of intent such as the intent of removing a whole paragraph even when another user is editing that same paragraph).
 
 <h2>Can I use an existing solution?</h2>
