@@ -10,7 +10,7 @@ The set-based solution exists because the problem has some very specific propert
 
 <h1>The problem with distributed replicas</h1>
 
-The above example of 'the sum of unique numbers' demonstrates a rather fundamental issue in distribute systems: how to reach consensus amongst several nodes when different events occur across the nodes. Broadly speaking, there are two possible ways of dealing with such modifications: strongle consistent replication or optimistic replication.
+The above example of 'the sum of unique numbers' demonstrates a rather fundamental issue in distribute systems: how to reach consensus amongst several nodes when different events occur across the nodes. Broadly speaking, there are two possible ways of dealing with such differences: strongle consistent replication or optimistic replication.
 
 <h2>Strongly consistent replication</h2>
 
