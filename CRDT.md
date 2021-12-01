@@ -53,7 +53,7 @@ In practice a CRDT brings:
 - associative: (x.y).z = x.(y.z)
 - idempotent: x.x = x
 
-A merge is required to be Idempotent because in distributed system events can be delivered more than once. Commutative and associative properties are required because in distributed systems the order of events is not guaranteed. The merge operation however requires the same result independent of the order in which events were received locally so that it can ensure that all local merges converge.
+A merge is required to be idempotent because in distributed system events can be delivered more than once. Commutative and associative properties are required because in distributed systems the order of events is not guaranteed. The merge operation however requires the same result independent of the order in which events were received locally so that it can ensure that all local merges converge.
 
 <h2>Grow-only counter</h2>
 
