@@ -103,7 +103,7 @@ An example of a 2P-set is the following:
 - Remove Set: A:{"drill"} B:{}
 - Merge Add-Set: {"drill","ipad","coffee cup"}
 - Merge Remove-Set: {"drill"}
-- Lookup: {"ipad","coffee cup""}
+- Lookup: {"ipad","coffee cup"}
 
 A 2P-set is however not a good solution to our problem, since: 
 - a gift can only be removed once and never added again (once an item is in the tombstone set it is never removed from the tombstone set).
