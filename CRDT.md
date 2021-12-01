@@ -93,7 +93,7 @@ Why are CRDTs a good candidate for this problem?
 - Order is not important.
 - Latency, failed requests etc. have no impact.
 
- Lets review a number of set-based CRDTs and see which would be appropriate for our holiday gift list application.
+ Let's review a number of set-based CRDTs and see which would be appropriate for our holiday gift list application.
 
 <h2>2P-Set</h2>
 
