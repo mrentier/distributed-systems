@@ -158,7 +158,12 @@ An alternative to a physical clock is a logical clock: a clock that keeps relati
 
 A vector clock tracks the last event you have observed from other processes (nodes) that you communicate with and the last event you have sent. Although the received events might not influence the next event you send, the fact that you have observed the events means that they <em>could</em> influence the next event you send. Any events that you have not observed cannot influence your actions. It is important to note that a logical clock is specific to a node and is not global across all nodes. This means that at any point in time it is likely that nodes have different logical clocks.
 
-A physical clock attempted to enforce a total order on all events. Given any two events across nodes, we could determine which event came first. Logical clocks only provide you a partial ordering of events. There are events across actors that we do not know the order of. For example when two nodes send events but do not receive events then we cannot determine the order of all events across all nodes.
+A vector clock is a n-tuple, with n being the number of processes. Assigning a vector clock timestamp can be done as follows:
+- Generating events: Every time an event is generated, a process increments its clock and assigns a timestamp to the event based on its knowledge of all the clocks in the system.
+- Sending messages: When a message is sent the timestamp of the sending event is given to the message.
+- Receiving messages: When a message is received, the process updates its knowledge of the system clock states by taking the maximum of each component of the message timestamp and its current knowledge of the system clock states. The receiving event gets this new timestamp.
+
+A physical clock attempted to enforce a total order on all events. Given any two events across nodes, we could determine which event came first. Logical clocks only provide you a partial ordering of events. There are events across actors that we do not know the order of. For example: when two nodes send events but do not receive events, then we cannot determine the order of all events across all nodes.
 
 <h2>Data consistency with version clocks</h2>
 
